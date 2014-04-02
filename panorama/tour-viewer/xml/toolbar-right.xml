@@ -1,0 +1,466 @@
+<krpano>
+	<!-- Right navigation -->
+	<layer 
+		name="navigation-right-menu" 
+		keep="true" 
+		type="container" 
+		bgcolor="0x000000" 
+		bgalpha="0.5" 
+		align="righttop" 
+		width="242" 
+		height="100%" 
+		y="0" 
+		x_opened="0" 
+		x_closed="-252"
+		zorder="-100">
+
+		<!-- button share social media -->
+		<layer 
+			name="share_on" 
+			url="%SWFPATH%/plugins/textfield.swf" 
+			align="lefttop" 
+			width="100" 
+			height="32" 
+			autoheight="true" 
+			x="5" 
+			y="110" 
+			background="false" 
+			border="false" 
+			css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:16px;" 
+			textshadow="1" 
+			html="Share on :"/>
+		<layer 
+			name="skin_btn_fb"     
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Facebook" 
+			crop="0|832|64|64"  
+			align="lefttop"      
+			x="80"  
+			y="85"   
+			scale="1" 
+			ondown2=""     
+			onup2=""
+			onclick="share_button('Facebook')" />
+		<layer 
+			name="skin_btn_tw"     
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Twitter" 
+			crop="64|832|64|64" 
+			align="lefttop"      
+			x="125" 
+			y="85"   
+			scale="1" 
+			ondown2=""     
+			onup2=""
+			onclick="share_button('Twitter')" />	
+		
+		<!-- button hide -->
+		<layer 
+			name="skin_btn_hide"   
+			style="skin_base|skin_glow|skin_tooltips" 
+			crop="0|448|64|64"  
+			align="leftbottom"       
+			x="-10"   
+			y="130"
+			tooltip="Hide Toolbar"   
+			scale="0.7" 
+			onclick="skin_hideskin()" />
+		<!-- button show -->
+		<layer 
+			name="skin_btn_show_container" 
+			keep="true" 
+			type="container" 
+			url="%SWFPATH%/plugins/textfield.swf" 
+			align="rightbottom" 
+			width="48" 
+			height="48" x="253" y="10"
+			background="true" 
+			backgroundcolor="0x000000" 
+			backgroundalpha="0.667"
+			border="true" 
+			bordercolor="0xFFFFFF" 
+			roundedge="8"
+			shadow="0.1" 
+			shadowrange="12" 
+			shadowcolor="0xFFFFFF"
+			alpha="0" 
+			visible="false">
+			<layer 
+				name="skin_btn_show"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				crop="64|448|64|64"
+				tooltip="Show Toolbar" 
+				align="centercenter"  
+				scale="0.7" 
+				alpha="0" 
+				visible="false"
+				onclick="skin_showskin()" />
+		</layer>
+
+		<!-- Title -->
+		<layer 
+			name="skin_topborder" 
+			style="skin_base" 
+			crop="2|0|60|12" 
+			align="topcenter" 
+			rotate="180"
+			width="70%" 
+			height="12" 
+			x="0" 
+			y="155" 
+			enabled="false" />
+		<layer 
+			name="navigation-right-title" 
+			url="%SWFPATH%/plugins/textfield.swf" 
+			align="lefttop" 
+			width="100%" 
+			height="32" 
+			autoheight="true" 
+			x="5" 
+			y="150" 
+			zorder="2" 
+			enabled="false" 
+			background="false" 
+			border="false" 
+			css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:16px;" 
+			textshadow="1" 
+			visible="false" />
+
+		<!-- Description -->
+		<layer 
+			name="navigation-right-description" 
+			keep="true" 
+			type="container" 
+			align="righttop" 
+			width="242" 
+			height="250" 
+			y="190" 
+			zorder="2">
+
+			<layer 
+				name="textmask" 
+				type="container" 
+				align="lefttop" 
+				x="5" 
+				y="5" 
+				width="210" 
+				height="240" 
+				maskchildren="true">
+
+				<layer 
+					name="text-description" 
+					url="%SWFPATH%/plugins/textfield.swf" 
+					handcursor="false" 
+					children="false" 
+					align="lefttop" 
+					x="0" 
+					y="0" 
+					width="210" 
+					autoheight="true" 
+					background="false" 
+					border="false" 
+					css="color:#FFFFFF; font-family:Verdana; font-size:12;" 
+					textshadow="1" />
+			</layer>
+			
+			<layer 
+				name="scrollbar" 
+				type="container" 
+				bgcolor="0x000000" 
+				bgalpha="0.3" 
+				align="righttop" 
+				x="5" 
+				y="5" 
+				zorder="1" 
+				width="19" 
+				height="240" />
+			
+				<layer 
+					name="scrollup" 
+					url="../img/dirbutton.png" 
+					align="righttop" 
+					x="24" 
+					y="5" 
+					zorder="2" 
+					rotate="-90" 
+					crop="0|0|19|19" 
+					onovercrop="0|19|19|19" 
+					ondowncrop="0|38|19|19"
+					ondown="asyncloop(pressed, 
+						sub(ny,layer[text-description].y,10); 
+						add(ny,+8); 
+						sub(th,170,layer[text-description].pixelheight); 
+						if(ny GT 0, set(ny,0)); 
+						div(sy,ny,th); 
+						mul(sy,166); 
+						add(sy,24); 
+						copy(layer[scrollslider].y,sy); 
+						add(ny,10); 
+						copy(layer[text-description].y,ny); );"
+				       />
+
+				<layer 
+					name="scrolldown" 
+					url="../img/dirbutton.png" 
+					align="rightbottom" 
+					x="24" 
+					y="5" 
+					zorder="2" 
+					rotate="+90" 
+					crop="0|0|19|19" 
+					onovercrop="0|19|19|19" 
+					ondowncrop="0|38|19|19"
+					ondown="asyncloop(pressed, 
+						sub(ny,layer[text-description].y,10); 
+						add(ny,-8); 
+						sub(th,170,layer[text-description].pixelheight); 
+						if(ny LT th, copy(ny,th)); 
+						div(sy,ny,th); 
+						mul(sy,166); 
+						add(sy,24); 
+						copy(layer[scrollslider].y,sy); 
+						add(ny,10); 
+						copy(layer[text-description].y,ny); );"
+				       />
+				<!--
+					200	 250
+					10 	 13
+					8	 10
+					170	 213
+					133	 166
+					24 	 30
+					157	 196
+				-->
+
+				<layer 
+					name="scrollslider" 
+					url="../img/sliderbutton.png" 
+					align="righttop" 
+					x="5" 
+					y="24" 
+					zorder="2" 
+					crop="0|0|19|19" 
+					onovercrop="0|19|19|19" 
+					ondowncrop="0|38|19|19"
+					ondown="copy(cy,y);copy(sy,mouse.stagey);dragging();"
+					dragging="if(pressed, sub(dy,mouse.stagey,sy); add(ny,cy,dy); if(ny LT 24, set(ny,24)); if(ny GT 196, set(ny,196)); copy(y,ny); sub(ty,ny,24); div(ty,166); sub(th,170,layer[text-description].pixelheight); mul(ty,th); add(ty,10); copy(layer[text-description].y,ty); delayedcall(0,dragging()); );"
+				       />
+
+		</layer>
+		
+		<!-- toolbar 1 -->
+		<layer 
+			name="skin_btn_up"     
+			style="skin_base|skin_glow" 
+			crop="0|256|64|64"  
+			align="leftbottom"      
+			x="60"  
+			y="160"   
+			scale="0.7" 
+			ondown2="set(vlookat_moveforce,-1);" 
+			onup2="set(vlookat_moveforce,0);" />
+		<layer 
+			name="skin_btn_dn"     
+			style="skin_base|skin_glow" 
+			crop="64|256|64|64" 
+			align="leftbottom"      
+			x="60"  
+			y="100"   
+			scale="0.7" 
+			ondown2="set(vlookat_moveforce,+1);" 
+			onup2="set(vlookat_moveforce,0);" />
+		<layer 
+			name="skin_btn_lt"     
+			style="skin_base|skin_glow" 
+			crop="0|192|64|64"  
+			align="leftbottom"      
+			x="30" 
+			y="130"   
+			scale="0.7" 
+			ondown2="set(hlookat_moveforce,-1);" 
+			onup2="set(hlookat_moveforce,0);" />
+		<layer 
+			name="skin_btn_rt"     
+			style="skin_base|skin_glow" 
+			crop="64|192|64|64" 
+			align="leftbottom"      
+			x="90"  
+			y="130"   
+			scale="0.7" 
+			ondown2="set(hlookat_moveforce,+1);" 
+			onup2="set(hlookat_moveforce,0);" />
+		<layer 
+			name="skin_btn_in"     
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Zoom In" 
+			crop="0|320|64|64"  
+			align="rightbottom"      
+			x="60"  
+			y="130"   
+			scale="0.7" 
+			ondown2="set(fov_moveforce,-1);"     
+			onup2="set(fov_moveforce,0);" />
+		<layer 
+			name="skin_btn_ou"     
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Zoom Out" 
+			crop="64|320|64|64" 
+			align="rightbottom"      
+			x="25" 
+			y="130"   
+			scale="0.7" 
+			ondown2="set(fov_moveforce,+1);"     
+			onup2="set(fov_moveforce,0);" />
+
+		<!-- toolbar 2 -->
+		<layer
+			name="toolbar-2" 
+			keep="true" 
+			type="container" 
+			bgcolor="0x000000" 
+			bgalpha="0" 
+			align="leftbottom" 
+			width="242" 
+			height="44" 
+			y="55" 
+			x="0" >
+			<layer 
+				name="view_normal"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Normal View"   
+				crop="0|640|64|64"   
+				align="leftbottom"        
+				x="0"    
+				scale="0.7" 
+				onclick="skin_view_fisheye();"        
+				showif="view.vlookatrange == 180"
+				devices="flash|webgl" />
+			<layer 
+				name="view_fisheye"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Fish Eye View"   
+				crop="64|640|64|64"   
+				align="leftbottom"        
+				x="40"    
+				scale="0.7" 
+				onclick="skin_view_fisheye();"        
+				showif="view.vlookatrange == 180"
+				devices="flash|webgl" />
+			<layer 
+				name="view_stereographic"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Stereographic View" 
+				crop="0|704|64|64"   
+				align="centerbottom"        
+				x="-20"    
+				scale="0.7" 
+				onclick="skin_view_stereographic();"        
+				showif="view.vlookatrange == 180"
+				devices="flash|webgl" />
+			<layer 
+				name="view_architectural"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Architectural View" 
+				crop="64|704|64|64"   
+				align="centerbottom"        
+				x="20"    
+				scale="0.7" 
+				onclick="skin_view_architectural();"        
+				showif="view.vlookatrange == 180"
+				devices="flash|webgl" />
+			<layer 
+				name="view_panini"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Panini View" 
+				crop="0|768|64|64"   
+				align="rightbottom"        
+				x="40"    
+				scale="0.7" 
+				onclick="skin_view_pannini();"        
+				showif="view.vlookatrange == 180"
+				devices="flash|webgl" />
+			<layer 
+				name="view_little_planet"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Little Planet View" 
+				crop="64|768|64|64"   
+				align="rightbottom"        
+				x="0"    
+				scale="0.7" 
+				onclick="skin_view_littleplanet();"        
+				showif="view.vlookatrange == 180"
+				devices="flash|webgl" />
+		</layer>
+		<!-- toolbar 3 -->
+		<layer
+			name="toolbar-3" 
+			keep="true" 
+			type="container" 
+			bgcolor="0x000000" 
+			bgalpha="0" 
+			align="leftbottom" 
+			width="242" 
+			height="44" 
+			x="0"
+			y="0" >
+			<layer 
+				name="skin_btn_prev"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Previus Scene" 
+				crop="0|64|64|64"   
+				align="leftbottom"        
+				x="0"    
+				scale="0.7" 
+				onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(-1), skin_nextscene(-1) );" />
+			<layer 
+				name="skin_btn_thumbs" 
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Toggle Thumbnail" 
+				crop="0|128|64|64"  
+				align="leftbottom"  
+				x="40"   
+				scale="0.7" 
+				ondown2="skin_showthumbs();" />
+			<layer 
+				name="skin_btn_fs"     
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Fullscreen" 
+				crop="0|576|64|64"  
+				align="centerbottom"      
+				x="-20"  
+				scale="0.7" 
+				onclick="switch(fullscreen);" />
+			<layer 
+				name="skin_btn_gyro"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Gyroscope" 
+				crop="0|384|64|64"  
+				align="centerbottom"      
+				x="20"  
+				scale="0.7" 
+				onclick="switch(plugin[skin_gyro].enabled);" 
+				visible="true" 
+				devices="html5" /><!-- visible="false" -->
+			<layer 
+				name="skin_btn_rotate" 
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Rotate View" 
+				crop="0|512|64|64" 
+				align="rightbottom" 
+				x="40" 
+				scale="0.7" 
+				onclick="autorotate_btn_events(); switch(autorotate.enabled);" 
+				onhover="if(autorotate.enabled, showtext(disable autorotation, hovertext),showtext(enable autorotation, hovertext));" />
+			<layer 
+				name="skin_btn_next"   
+				style="skin_base|skin_glow|skin_tooltips" 
+				tooltip="Next Scene" 
+				crop="64|64|64|64"  
+				align="rightbottom"       
+				x="0"    
+				scale="0.7" 
+				alpha="0.5"  
+				onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" />
+		</layer>
+	</layer>
+</krpano>

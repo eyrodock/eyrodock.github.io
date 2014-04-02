@@ -1,0 +1,153 @@
+<krpano version="1.17" title="Balai Kota" onstart="startup();">
+
+	<include url="../tour-viewer/xml/skin-style.xml" />
+	<include url="../tour-viewer/xml/toolbar-right.xml" />
+	<include url="../tour-viewer/xml/skin-layout.xml" />
+	<include url="../tour-viewer/xml/layout-mobile.xml" />
+	<include url="../tour-viewer/xml/layout-android.xml" />
+	<include url="../tour-viewer/xml/skin-event.xml" />
+	<include url="../tour-viewer/xml/skin-action.xml" />
+	<include url="../tour-viewer/xml/context-menu.xml" />
+	<include url="../tour-viewer/xml/plugin.xml" />
+	
+	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+	<skin_settings bingmaps="false"
+	               bingmaps_key=""
+	               bingmaps_zoombuttons="false"
+	               gyro="true"
+	               thumbs_width="120" 
+	               thumbs_height="80" 
+	               thumbs_padding="10" 
+	               thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               controlbar_offset="20"
+	               share_url="http://cdn2.eyrodock.com/panorama/Balai-Kota/?html5=flash"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="../tour-viewer/img/logo.png" scale="0.9" align="righttop" x="15" y="10" zorder="100" opened_onclick="openurl('http://eyropano.com',_blank);" />
+
+	<autorotate enabled="true" waittime="3.0" speed="5" />
+	<!--autorotate enabled="true" waittime="6.0" accel="6" speed="10" horizon="15" tofov="60" /-->
+
+	<scene name="scene_Balai_Kota_1" title="Balai Kota 1" onstart="" thumburl="pano-images/Balai_Kota_1.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Balai_Kota_1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Balai_Kota_1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Balai_Kota_1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Balai_Kota_1.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.155" atv="-0.310" linkedscene="scene_Balai_Kota_2" />
+	</scene>
+	
+	<data name="scene_Balai_Kota_1">
+		Gedung utama Balai Kota di Taman Surya di daerah Ketabang itu mulai dibangun pada tahun 1923 dan mulai ditempati pada tahun 1927. Arsiteknya ialah C. Citroen dan pelaksanaannya H.V. Hollandsche Beton Mij. Biaya seluruhnya, termasuk perlengkapan dan lain-lainnya, menghabiskan dana sekitar 1000 gulden. Pemandangan gedung Balai Kota Surabaya di waktu malam hari.[br/][br/]
+
+		Ukuran gedung utama : panjang 102 m dan lebar 19 m. Konstruksinya terdiri dari tiang-tiang pancang beton bertulang yang ditanam, sedangkan dinding-dindingnya diisi dengan bata dan semen. Atapnya terbuat dari rangka besi dan ditutup dengan sirap, Belakangan atap ini kemudian diganti dengan genteng.
+	</data>
+
+	<scene name="scene_Balai_Kota_2" title="Balai Kota 2" onstart="" thumburl="pano-images/Balai_Kota_2.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Balai_Kota_2.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Balai_Kota_2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Balai_Kota_2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Balai_Kota_2.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.000" atv="-3.407" linkedscene="scene_Balai_Kota_1" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-183.248" atv="4.810" linkedscene="scene_Balai_Kota_3" />
+	</scene>
+	<data name="scene_Balai_Kota_2">
+		Gedung utama Balai Kota di Taman Surya di daerah Ketabang itu mulai dibangun pada tahun 1923 dan mulai ditempati pada tahun 1927. Arsiteknya ialah C. Citroen dan pelaksanaannya H.V. Hollandsche Beton Mij. Biaya seluruhnya, termasuk perlengkapan dan lain-lainnya, menghabiskan dana sekitar 1000 gulden. Pemandangan gedung Balai Kota Surabaya di waktu malam hari.[br/][br/]
+
+		Ukuran gedung utama : panjang 102 m dan lebar 19 m. Konstruksinya terdiri dari tiang-tiang pancang beton bertulang yang ditanam, sedangkan dinding-dindingnya diisi dengan bata dan semen. Atapnya terbuat dari rangka besi dan ditutup dengan sirap, Belakangan atap ini kemudian diganti dengan genteng.
+	</data>
+
+	<scene name="scene_Balai_Kota_3" title="Balai Kota 3" onstart="" thumburl="pano-images/Balai_Kota_3.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Balai_Kota_3.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Balai_Kota_3.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Balai_Kota_3.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Balai_Kota_3.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-171.552" atv="-1.164" linkedscene="scene_Balai_Kota_2" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="3.992" atv="5.869" linkedscene="scene_Balai_Kota_4" />
+	</scene>
+	<data name="scene_Balai_Kota_3">
+		Gedung utama Balai Kota di Taman Surya di daerah Ketabang itu mulai dibangun pada tahun 1923 dan mulai ditempati pada tahun 1927. Arsiteknya ialah C. Citroen dan pelaksanaannya H.V. Hollandsche Beton Mij. Biaya seluruhnya, termasuk perlengkapan dan lain-lainnya, menghabiskan dana sekitar 1000 gulden. Pemandangan gedung Balai Kota Surabaya di waktu malam hari.[br/][br/]
+
+		Ukuran gedung utama : panjang 102 m dan lebar 19 m. Konstruksinya terdiri dari tiang-tiang pancang beton bertulang yang ditanam, sedangkan dinding-dindingnya diisi dengan bata dan semen. Atapnya terbuat dari rangka besi dan ditutup dengan sirap, Belakangan atap ini kemudian diganti dengan genteng.
+	</data>
+
+	<scene name="scene_Balai_Kota_4" title="Balai Kota 4" onstart="" thumburl="pano-images/Balai_Kota_4.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Balai_Kota_4.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Balai_Kota_4.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Balai_Kota_4.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Balai_Kota_4.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="183.613" atv="7.237" linkedscene="scene_Balai_Kota_3" />
+	</scene>
+	<data name="scene_Balai_Kota_4">
+		Gedung utama Balai Kota di Taman Surya di daerah Ketabang itu mulai dibangun pada tahun 1923 dan mulai ditempati pada tahun 1927. Arsiteknya ialah C. Citroen dan pelaksanaannya H.V. Hollandsche Beton Mij. Biaya seluruhnya, termasuk perlengkapan dan lain-lainnya, menghabiskan dana sekitar 1000 gulden. Pemandangan gedung Balai Kota Surabaya di waktu malam hari.[br/][br/]
+
+		Ukuran gedung utama : panjang 102 m dan lebar 19 m. Konstruksinya terdiri dari tiang-tiang pancang beton bertulang yang ditanam, sedangkan dinding-dindingnya diisi dengan bata dan semen. Atapnya terbuat dari rangka besi dan ditutup dengan sirap, Belakangan atap ini kemudian diganti dengan genteng.
+	</data>
+	
+</krpano>

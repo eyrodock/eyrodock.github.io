@@ -1,0 +1,175 @@
+<!-- Alternative small screen layout for mobile devices (override/extend settings) -->
+
+	<krpano devices="mobile">
+		<layer name="skin_scroll_window" y="0" y_opened="0" y_closed="-4">
+			<layer name="skin_scroll_layer">
+				<layer name="skin_topborder" height="24" />
+				<!--layer name="skin_title" css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:26px;" /-->
+				<layer name="skin_scroll_container">
+					<layer name="skin_thumbs_container">
+						<layer name="skin_thumbs_scrollleft"  scale="1" />
+						<layer name="skin_thumbs_scrollright" scale="1" />
+						<layer name="skin_thumbs_scrollindicator" height="6" />
+						<layer name="skin_thumbs" height="200" />
+					</layer>
+				</layer>
+			</layer>
+		</layer>
+
+		<!-- Right navigation -->
+	<layer name="navigation-right-menu">
+		<layer name="skin_btn_hide" scale="1.2" x="-16" y="-13" />
+		<!-- button show -->
+		<layer name="skin_btn_show_container" width="72" height="72">
+			<layer name="skin_btn_show" scale="1.2"/>
+		</layer>
+
+		<layer name="share_on" visible="false"/>
+		<layer name="skin_btn_fb" visible="false" />
+		<layer name="skin_btn_tw" visible="false" />
+		
+		<!-- Title -->
+		<layer name="skin_topborder" visible="false" />
+		<layer name="navigation-right-title" visible="false"/>
+		<!-- Description -->
+		<layer 
+			name="navigation-right-title" 
+			url="%SWFPATH%/plugins/textfield.swf" 
+			align="lefttop" 
+			width="100%" 
+			height="32" 
+			autoheight="true" 
+			x="5" 
+			y="100" 
+			zorder="2" 
+			enabled="false" 
+			background="false" 
+			border="false" 
+			css="text-align:left; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:28px;" 
+			textshadow="1" 
+			visible="false" />
+		
+		<layer 
+			name="navigation-right-description" 
+			keep="true" 
+			type="container" 
+			align="lefttop" 
+			width="230" 
+			height="600" 
+			y="190" 
+			zorder="2">
+
+			<layer 
+				name="textmask"
+				width="100%" 
+				height="100%" 
+				maskchildren="true">
+
+				<layer 
+					name="text-description" 
+					width="100%" 
+					css="color:#FFFFFF; font-family:Arial; font-weight:bold; font-weight:bold; font-size:20;" />
+			</layer>
+			
+			<layer name="scrollbar" visible="false"/>
+				<layer name="scrollup" visible="false"/>
+				<layer name="scrolldown" visible="false"/>
+				<layer name="scrollslider" visible="false"/>
+		</layer>
+		
+		<!-- toolbar 1 -->
+		<layer name="skin_btn_up" visible="false" />
+		<layer name="skin_btn_dn" visible="false" />
+		<layer name="skin_btn_lt" visible="false" />
+		<layer name="skin_btn_rt" visible="false" />
+		<layer name="skin_btn_in" visible="false" />
+		<layer name="skin_btn_ou" visible="false" />
+
+		<!-- toolbar 2 -->
+		<layer name="toolbar-2" visible="false" ></layer>
+		
+	</layer>
+	<!-- toolbar 3 -->
+	<layer
+		name="toolbar-3" 
+		keep="true" 
+		type="container" 
+		bgcolor="0x000000" 
+		bgalpha="0.5" 
+		align="bottom" 
+		width="100%" 
+		height="80" 
+		x="0"
+		y="0" 
+		y_opened="200"
+		y_closed="0"
+		>
+		<layer 
+			name="skin_btn_prev" visible="false" />
+		<layer 
+			name="skin_btn_thumbs" 
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Toggle Thumbnail" 
+			crop="0|128|64|64"  
+			align="right"  
+			x="0"   
+			scale="1.2" 
+			ondown2="skin_showthumbs();" />
+		<layer 
+			name="skin_btn_rotate" 
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Rotate View" 
+			crop="0|512|64|64" 
+			align="right" 
+			x="80" 
+			scale="1.2" 
+			onclick="autorotate_btn_events(); switch(autorotate.enabled);" 
+			onhover="if(autorotate.enabled, showtext(disable autorotation, hovertext),showtext(enable autorotation, hovertext));" />
+		<layer 
+			name="skin_btn_fs" visible="false" />
+		<layer 
+			name="skin_btn_gyro"   
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Gyroscope" 
+			crop="0|384|64|64"  
+			align="right"      
+			x="160"  
+			scale="1.2" 
+			onclick="switch(plugin[skin_gyro].enabled);" 
+			visible="true" 
+			devices="html5" /><!-- visible="false" -->
+		
+		<layer 
+			name="skin_btn_next" visible="false" />
+
+		<!-- button share social media -->
+		<layer 
+			name="skin_btn_fb2"     
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Facebook" 
+			crop="0|832|64|64"  
+			align="left"      
+			x="0" 
+			scale="1.5" 
+			ondown2=""     
+			onup2=""
+			onclick="share_button('Facebook')" />
+		<layer 
+			name="skin_btn_tw2"     
+			style="skin_base|skin_glow|skin_tooltips" 
+			tooltip="Twitter" 
+			crop="64|832|64|64" 
+			align="left"      
+			x="70"
+			scale="1.5" 
+			ondown2=""     
+			onup2=""
+			onclick="share_button('Twitter')" />
+	</layer>
+
+		<layer name="skin_loadingtext" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-style:italic; font-size:44px;" />
+		<layer name="skin_buttonglow"  scale="2.0" />
+		<layer name="skin_thumbborder" scale="1" />
+
+		<style name="skin_thumbtext_style" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:20px;" />
+	</krpano>

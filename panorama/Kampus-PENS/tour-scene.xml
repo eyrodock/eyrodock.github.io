@@ -1,0 +1,245 @@
+<krpano version="1.17" title="Kampus PENS" onstart="startup();">
+<!--  -->
+	<include url="../tour-viewer/xml/skin-style.xml" />
+	<include url="../tour-viewer/xml/toolbar-right.xml" />
+	<include url="../tour-viewer/xml/skin-layout.xml" />
+	<include url="../tour-viewer/xml/layout-mobile.xml" />
+	<include url="../tour-viewer/xml/layout-android.xml" />
+	<include url="../tour-viewer/xml/skin-event.xml" />
+	<include url="../tour-viewer/xml/skin-action.xml" />
+	<include url="../tour-viewer/xml/context-menu.xml" />
+	<include url="../tour-viewer/xml/plugin.xml" />
+
+	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+	<skin_settings bingmaps="false"
+	               bingmaps_key=""
+	               bingmaps_zoombuttons="false"
+	               gyro="true"
+	               thumbs_width="120" 
+	               thumbs_height="80" 
+	               thumbs_padding="10" 
+	               thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               controlbar_offset="20"
+	               share_url="http://cdn2.eyrodock.com/panorama/Kampus-PENS/?html5=flash"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="../tour-viewer/img/logo.png" scale="0.9" align="righttop" x="15" y="10" zorder="100" opened_onclick="openurl('http://eyropano.com',_blank);" />
+
+	<autorotate enabled="true" waittime="3.0" speed="5" />
+	<!--autorotate enabled="true" waittime="6.0" accel="6" speed="10" horizon="15" tofov="60" /-->
+
+	<scene name="scene_Pos_Satpam_D4" title="Pos Satpam D4" onstart="" thumburl="pano-images/Pos_Satpam_D4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="100" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Pos_Satpam_D4.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Pos_Satpam_D4.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Pos_Satpam_D4.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Pos_Satpam_D4.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-164.125" atv="2.770" linkedscene="scene_Hall_Tengah" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-61.739" atv="2.979" linkedscene="scene_training_center" />
+
+	</scene>
+
+	<data name="scene_Pos_Satpam_D4">
+		Gedung Pos Satpam D4 terletak di sebelah pintu masuk bagian timur. Bersebelahan dengan ruangan Training Center dan tepat berada di depan gedung D4.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+	<scene name="scene_Hall_Tengah" title="Hall Tengah" onstart="" thumburl="pano-images/Hall_Tengah.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-50" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Hall_Tengah.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Hall_Tengah.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Hall_Tengah.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Hall_Tengah.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="138.073" atv="8.797" linkedscene="scene_Pos_Satpam_D4" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="57.435" atv="3.425" linkedscene="scene_Kantin" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="27.435" atv="3.425" linkedscene="scene_Lapangan_Basket_Tengah" />
+
+	</scene>
+
+	<data name="scene_Hall_Tengah">
+		Hall bagian tengah merupakan ruangan yang terletak di lantai satu gedung D4 bagian tengah yang tepat berada di depan perpustakaan D4.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+	<scene name="scene_Lapangan_Basket_Tengah" title="Lapangan Basket Tengah" onstart="" thumburl="pano-images/Lapangan_Basket_Tengah.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-40" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Lapangan_Basket_Tengah.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Lapangan_Basket_Tengah.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Lapangan_Basket_Tengah.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Lapangan_Basket_Tengah.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+	</scene>
+
+	<data name="scene_Lapangan_Basket_Tengah">
+		Fasilitas Lapangan Basket PENS terletak di bagian tengah dari Gedung D4.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+	<scene name="scene_Kantin" title="Kantin" onstart="" thumburl="pano-images/Kantin.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-70" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Kantin.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Kantin.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Kantin.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Kantin.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-132.006" atv="4.899" linkedscene="scene_Training_Center" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-172.188" atv="4.040" linkedscene="scene_lapangan_merah" />
+
+	</scene>
+
+	<data name="scene_Kantin">
+		Berikut ini merupakan image panorama dari kantin PENS.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+	<scene name="scene_Lapangan_Merah" title="Lapangan Merah" onstart="" thumburl="pano-images/Lapangan_Merah.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="140" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Lapangan_Merah.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Lapangan_Merah.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Lapangan_Merah.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Lapangan_Merah.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-93.257" atv="-0.156" linkedscene="scene_tempat_parkir" />
+
+	</scene>
+
+	<data name="scene_Lapangan_Merah">
+		Berikut ini merupakan image panorama dari Lapangan Merah PENS. Lapangan ini biasanya digunakan untuk kegiatan kemahasiswaan, juga untuk sarana olahraga. Terletak di bagian tengah dari Gedung D3.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+	<scene name="scene_Tempat_Parkir" title="Tempat Parkir" onstart="" thumburl="pano-images/Tempat_Parkir.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-80" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Tempat_Parkir.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Tempat_Parkir.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Tempat_Parkir.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Tempat_Parkir.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="135.296" atv="4.234" linkedscene="scene_lapangan_merah" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="45.826" atv="5.445" linkedscene="scene_training_center" />
+
+	</scene>
+
+	<data name="scene_Tempat_Parkir">
+		Berikut ini merupakan image panorama dari tempat parkir PENS. Terletak di bagian depan area Kampus PENS.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+	<scene name="scene_Training_Center" title="Training Center" onstart="" thumburl="pano-images/Training_Center.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="50" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Training_Center.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Training_Center.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Training_Center.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Training_Center.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-111.113" atv="6.097" linkedscene="scene_Kantin" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="140.110" atv="2.699" linkedscene="scene_pos_satpam_d4" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="164.276" atv="2.575" linkedscene="scene_Hall_Tengah" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-5.800" atv="1.750" linkedscene="scene_tempat_parkir" />
+
+	</scene>
+
+	<data name="scene_Training_Center">
+		Berikut ini merupakan image panorama dari Gedung Training Center yang berguna untuk pusat training PENS. Terletak di sebelah tempat parkir PENS.[br/][br/]
+		Klik tanda panah hitam untuk menuju navigasi selanjutnya -->
+	</data>
+
+</krpano>

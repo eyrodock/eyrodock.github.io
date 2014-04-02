@@ -1,0 +1,80 @@
+<krpano>
+	<!-- compass2 with rotating plate -->
+	<plugin 
+		name="compass2" 
+		url="../img/compass.png" 
+		keep="true" 
+		zorder="1" 
+		children="false"
+		align="lefttop" 
+		x="10" 
+		y="10"
+		scale="0.55" 
+		scalechildren="true"
+		destscale="0.55"
+		onclick="switch(destscale,0.55,1.0);tween(scale,get(destscale));"
+	/>
+
+	<!-- compass2 plate, the rotation will be changed in the "onviewchange" action -->
+	<plugin 
+		name="compass2_plate" 
+		url="../img/compass_plate.png" 
+		keep="true" 
+		handcursor="false"
+		parent="compass2" 
+		zorder="1"
+		align="center"
+	/>
+
+	<!-- compass2 fixed pointer -->
+	<plugin 
+		name="compass2_pointer" 
+		url="../img/compass_pointer.png" 
+		keep="true" 
+		handcursor="false"
+		parent="compass2" 
+		zorder="2"
+		align="center"
+	/>
+
+	<!-- compass2 fixed outer ring -->
+	<plugin 
+		name="compass2_ring" 
+		url="../img/compass_ring.png" 
+		keep="true" 
+		handcursor="false"
+		parent="compass2" 
+		zorder="3"
+		align="center"
+	/>
+
+	<!-- compass2 glass cap (flash only, because there is no blendmode in html5) -->
+	<plugin 
+		name="glass2" 
+		devices="flash" 
+		url="../img/glass.jpg" 
+		keep="true" 
+		enabled="false"
+		blendmode="screen" 
+		alpha="0.5"
+		parent="compass2" 
+		zorder="4"
+		align="center"
+	/>
+
+	<plugin 
+		name="skin_gyro"        
+		keep="true" 
+		url="" 
+		html5_url="%SWFPATH%/plugins/gyro.js" 
+		devices="html5+!firefox+!android" 
+		enabled="false" 
+		camroll="true" 
+		friction="0" 
+		velastic="0" 
+		onavailable="if(device.fullscreensupport, 
+			if(device.mobile,
+				add(layer[skin_btn_gyro].x,40),
+				add(layer[skin_btn_gyro].x,20));); 
+			set(layer[skin_btn_gyro].visible,true);" />
+</krpano>

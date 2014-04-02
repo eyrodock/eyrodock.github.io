@@ -1,0 +1,123 @@
+<krpano version="1.17" title="Perpus Kota" onstart="startup();">
+
+	<include url="../tour-viewer/xml/skin-style.xml" />
+	<include url="../tour-viewer/xml/toolbar-right.xml" />
+	<include url="../tour-viewer/xml/skin-layout.xml" />
+	<include url="../tour-viewer/xml/layout-mobile.xml" />
+	<include url="../tour-viewer/xml/layout-android.xml" />
+	<include url="../tour-viewer/xml/skin-event.xml" />
+	<include url="../tour-viewer/xml/skin-action.xml" />
+	<include url="../tour-viewer/xml/context-menu.xml" />
+	<include url="../tour-viewer/xml/plugin.xml" />
+	
+	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+	<skin_settings bingmaps="false"
+	               bingmaps_key=""
+	               bingmaps_zoombuttons="false"
+	               gyro="true"
+	               thumbs_width="120" 
+	               thumbs_height="80" 
+	               thumbs_padding="10" 
+	               thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               controlbar_offset="20"
+	               share_url="http://cdn2.eyrodock.com/panorama/Perpus-Kota/?html5=flash"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="../tour-viewer/img/logo.png" scale="0.9" align="righttop" x="15" y="10" zorder="100" opened_onclick="openurl('http://eyropano.com',_blank);" />
+
+	<autorotate enabled="true" waittime="3.0" speed="5" />
+	<!--autorotate enabled="true" waittime="6.0" accel="6" speed="10" horizon="15" tofov="60" /-->
+
+	<scene name="scene_Perpus_Kota_1" title="Perpus Kota 1" onstart="" thumburl="pano-images/Perpus_Kota_1.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Perpus_Kota_1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Perpus_Kota_1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Perpus_Kota_1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Perpus_Kota_1.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.694" atv="4.541" linkedscene="scene_perpus_kota_2" />
+	</scene>
+	<data name="scene_Perpus_Kota_1">
+		Tak bisa dipungkiri, masyarakat Indonesia khususnya masyarakat Kota Surabaya lebih akrab dengan budaya mendengar dibandingkan budaya membaca, lebih memprihatinkan lagi dari berbagai penelitian yang dilakukan para ahli hanya 10 % masyarakat Indonesia yang dikategorikan intelek dan akrab dengan kebiasaan membaca, padahal untuk menjadi masyarakat yang maju dan beradab memerlukan kecerdasan yang luar biasa dan itu bisa didapatkan dari kebiasaan membaca.[br/][br/]
+
+		Faktor ekonomi yang minimal untuk menyediakan sarana bagi kegiatan membaca semestinya tidak tepat dijadikan alasan, Pemerintah Kota Surabaya dalam hal ini Badan Arsip dan Perpustakaan Kota Surabaya yang mempunyai wewenang dalam kaitannya dengan kampanye gemar membaca telah melakukan berbagai program dan kegiatan untuk memompa semangat membaca dan menjadikan membaca sebagai budaya measyarakat Surabaya, penyediaan sarana dan prasarana seperti Perpustakaan, Taman Bacaan (TBM), Perpustakaan Keliling dan penambahan koleksi buku setiap tahunnya bagi Perpustakaan Sekolah – sekolah adalah sebagian kecil upaya untuk membantu masyarakat Surabaya untuk gemar membaca.
+	</data>
+
+	<scene name="scene_Perpus_Kota_2" title="Perpus Kota 2" onstart="" thumburl="pano-images/Perpus_Kota_2.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Perpus_Kota_2.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Perpus_Kota_2.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Perpus_Kota_2.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Perpus_Kota_2.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-44.536" atv="1.292" linkedscene="scene_perpus_kota_1" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="52.087" atv="15.890" linkedscene="scene_perpus_kota_3" />
+	</scene>
+	<data name="scene_Perpus_Kota_2">
+		Tak bisa dipungkiri, masyarakat Indonesia khususnya masyarakat Kota Surabaya lebih akrab dengan budaya mendengar dibandingkan budaya membaca, lebih memprihatinkan lagi dari berbagai penelitian yang dilakukan para ahli hanya 10 % masyarakat Indonesia yang dikategorikan intelek dan akrab dengan kebiasaan membaca, padahal untuk menjadi masyarakat yang maju dan beradab memerlukan kecerdasan yang luar biasa dan itu bisa didapatkan dari kebiasaan membaca.[br/][br/]
+
+		Faktor ekonomi yang minimal untuk menyediakan sarana bagi kegiatan membaca semestinya tidak tepat dijadikan alasan, Pemerintah Kota Surabaya dalam hal ini Badan Arsip dan Perpustakaan Kota Surabaya yang mempunyai wewenang dalam kaitannya dengan kampanye gemar membaca telah melakukan berbagai program dan kegiatan untuk memompa semangat membaca dan menjadikan membaca sebagai budaya measyarakat Surabaya, penyediaan sarana dan prasarana seperti Perpustakaan, Taman Bacaan (TBM), Perpustakaan Keliling dan penambahan koleksi buku setiap tahunnya bagi Perpustakaan Sekolah – sekolah adalah sebagian kecil upaya untuk membantu masyarakat Surabaya untuk gemar membaca.
+	</data>
+
+	<scene name="scene_Perpus_Kota_3" title="Perpus Kota 3" onstart="" thumburl="pano-images/Perpus_Kota_3.tiles/thumb.jpg" lat="0.00000000" lng="0.00000000" heading="0.0">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="pano-images/Perpus_Kota_3.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1304" tiledimageheight="1304">
+				<cube url="pano-images/Perpus_Kota_3.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="652" tiledimageheight="652">
+				<cube url="pano-images/Perpus_Kota_3.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="pano-images/Perpus_Kota_3.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-160.213" atv="9.290" linkedscene="scene_perpus_kota_2" />
+	</scene>
+	<data name="scene_Perpus_Kota_3">
+		Tak bisa dipungkiri, masyarakat Indonesia khususnya masyarakat Kota Surabaya lebih akrab dengan budaya mendengar dibandingkan budaya membaca, lebih memprihatinkan lagi dari berbagai penelitian yang dilakukan para ahli hanya 10 % masyarakat Indonesia yang dikategorikan intelek dan akrab dengan kebiasaan membaca, padahal untuk menjadi masyarakat yang maju dan beradab memerlukan kecerdasan yang luar biasa dan itu bisa didapatkan dari kebiasaan membaca.[br/][br/]
+
+		Faktor ekonomi yang minimal untuk menyediakan sarana bagi kegiatan membaca semestinya tidak tepat dijadikan alasan, Pemerintah Kota Surabaya dalam hal ini Badan Arsip dan Perpustakaan Kota Surabaya yang mempunyai wewenang dalam kaitannya dengan kampanye gemar membaca telah melakukan berbagai program dan kegiatan untuk memompa semangat membaca dan menjadikan membaca sebagai budaya measyarakat Surabaya, penyediaan sarana dan prasarana seperti Perpustakaan, Taman Bacaan (TBM), Perpustakaan Keliling dan penambahan koleksi buku setiap tahunnya bagi Perpustakaan Sekolah – sekolah adalah sebagian kecil upaya untuk membantu masyarakat Surabaya untuk gemar membaca.
+	</data>
+</krpano>
